@@ -1,5 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, Button, Text, View } from 'react-native';
 
 
 
@@ -7,7 +7,7 @@ function  Alimentos ({navigation}) {
   return (
     <View style={styles.container}>
       <Text>ALimentos</Text>
-      <Button title='ir a Shop' onPress={ () =>{navigation.native ('Shops')}}/>
+      <Button title='ir a Shop' onPress={ () =>{navigation.navigate ('Shops')}}/>
     </View>
   );
 }
