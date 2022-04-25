@@ -3,11 +3,11 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Platform } from "react-native";
 
-import AlimentoDetail from "../screens/Detalle";
-import FormScreen from "../screens/FormScreen";
-import Alimentos from "../screens/Alimentos";
-import Productos from "../screens/Productos";
-import { COLORS } from "../constants/colors";
+import AlimentoDetail from "../../screens/Detalle";
+import FormScreen from "../../screens/FormScreen";
+import Alimentos from "../../screens/Alimentos";
+import Productos from "../../screens/Productos";
+import { COLORS } from "../../constants/colors";
 
 
 const Stack = createNativeStackNavigator ();
@@ -16,7 +16,7 @@ const Stack = createNativeStackNavigator ();
 const ShopNavigator = () => {
 
     return (
-        <NavigationContainer>
+        
             <Stack.Navigator initialRouteName="Home" screenOptions={{
                 headerStyle: {backgroundColor: Platform.OS === 'android' ? COLORS.encabezado: '',
                 },
@@ -34,7 +34,7 @@ const ShopNavigator = () => {
                  <Stack.Screen name="Detail"  component={AlimentoDetail} 
                 options={({route}) =>({title: route.params.alimento.name})}/>
             </Stack.Navigator>
-        </NavigationContainer>
+        
     )
 }
 
