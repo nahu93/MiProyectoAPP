@@ -23,7 +23,7 @@ const TabNavigator = () => (
      options={{
          tabBarIcon:({focused})=>(
              <View style={styles.item}>
-                 <Ionicons name="md-home" size={20} color="black" />
+                 <Ionicons name="md-home" size={30} color="black" />
                  <Text>Tienda</Text>
              </View>
          )
@@ -36,7 +36,7 @@ const TabNavigator = () => (
      options={{
         tabBarIcon:({focused})=>(
             <View style={styles.item}>
-                <Ionicons name="md-cart" size={20} color="black" />
+                <Ionicons name="md-cart" size={30} color="black" />
                 <Text>Carrito</Text>
             </View>
         )
