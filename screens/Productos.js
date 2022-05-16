@@ -10,19 +10,21 @@ import {filteredAlimento,selectAlimento} from '../store/action/alimento.action';
 function Productos ({navigation}) {
 
   const dispatch = useDispatch();
-  const categoryAlimentos = useSelector(state => state.alimento.filteredAlimento);
+  const categoryAlimentos = useSelector(state => state.alimentos.filteredAlimento);
   const category = useSelector (state => state.categories.selected);
 
+  
  //const productosAlimentos = AlimentoBalanceado.filter (alimento => alimento.category === route.params.categoryID )
 
  useEffect ( () =>{
-   console.log ("screen:" + category.id)
+   console.log ("screen:" + category.id);
    dispatch (filteredAlimento(category.id));
+   
 
 
    },[])
 
-const handleSelect = (item) =>{
+ const handleSelect = (item) =>{
   
   dispatch (selectAlimento(item.id))
  
@@ -33,9 +35,9 @@ const handleSelect = (item) =>{
   })
 }
 
-const renderItemAlimento = ({item}) => <AlimentosItem item={item} onSelected={handleSelect}/>
+ const renderItemAlimento = ({item}) => <AlimentosItem item={item} onSelected={handleSelect}/>
 
-
+ console.log (categoryAlimentos)
 
   return (
     
@@ -44,6 +46,7 @@ const renderItemAlimento = ({item}) => <AlimentosItem item={item} onSelected={ha
     data={categoryAlimentos}
     keyExtractor={item => item.id}
     renderItem={renderItemAlimento}/>
+    
     
 
   );

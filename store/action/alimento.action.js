@@ -3,9 +3,9 @@ export const FILTERED_ALIMENTO = 'FILTERED_ALIMENTO'
 
 export const selectAlimento = (id) => ({
     type: SELECT_ALIMENTO,
-    alimentoID:id
+    alimentoID: id,
 })
 export const filteredAlimento = (id) => ({
-    type:FILTERED_ALIMENTO,
-    categoryId:id
+    type: FILTERED_ALIMENTO,
+    categoryID: id,
 })

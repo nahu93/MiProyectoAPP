@@ -8,9 +8,10 @@ const initialState= {
 }
 
 
-const AlimentoReducer = (state = initialState,action) => {
+const AlimentoReducer = (state = initialState, action) => {
     switch(action.type){
         case SELECT_ALIMENTO:
+             console.log ("SELECT_ALIMENTO"+ action.alimentoID)
             return {
                 ...state,
                 selected : state.alimentos.find (alimento => alimento.id === action.alimentoID)
@@ -27,4 +28,4 @@ const AlimentoReducer = (state = initialState,action) => {
 
 }
 
-export default AlimentoReducer
+export default AlimentoReducer;

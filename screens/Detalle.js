@@ -1,10 +1,16 @@
 import React from "react";
-import {Text,StyleSheet,View,Button} from 'react-native';
+import {Text,StyleSheet,View,Button,TouchableOpacity} from 'react-native';
+import {useSelector, useDispatch} from 'react-redux'
+import { addItem } from "../store/action/cart.action";
 
 
-function AlimentoDetail ({route}) {
+function AlimentoDetail () {
 
-const alimento = route.params.alimento;
+const dispatch = useDispatch ();
+
+const alimento = useSelector (state=>state.alimentos.selected) 
+
+const handlerAddItemCart = () => dispatch (addItem (alimento))
 
 return(
 
@@ -13,6 +19,11 @@ return(
     <Text >{alimento.descripcion} </Text>
     <Text >precio: ${alimento.precio} </Text>
     <Text > cantidad : {alimento.cantidad} Kg </Text>
+    <TouchableOpacity onPress={handlerAddItemCart}>
+        <View style={StyleSheet.Button} >
+            <Text style={styles.textButton}> Agregar al carrito</Text>
+        </View>
+    </TouchableOpacity>
 </View>
 )
 }
