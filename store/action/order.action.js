@@ -1,3 +1,4 @@
+
 import {URL_API} from '../../constants/database';
 
 export const GET_ORDERS = 'GET_ORDERS';
@@ -32,7 +33,7 @@ export const getOrders = () =>{
 
             dispatch ({ 
                 type: GET_ORDERS, 
-                payload: items
+                payload: items,
             })
         } catch (error){
             console.log (error.message)

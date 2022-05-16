@@ -16,12 +16,19 @@ const OrderScreen = ({navigation}) => {
         <ItemOrders
         item = {itemData.item}
         onDelete={onHandlerDeleteItem}/>
+        
     )
 
     useEffect (()=>{
 
-        dispatch (getOrders());
-    },[]);
+        const unsubscribe = navigation.addListener ('focus', ()=>{
+         dispatch (getOrders());   
+        })
+
+        return unsubscribe
+
+        
+    },[navigation]);
 
 
     return (
@@ -29,7 +36,7 @@ const OrderScreen = ({navigation}) => {
             <View>
                 <FlatList
                 data={orders}
-                rederItem = {renderItem}
+                renderItem = {renderItem}
                 keyExtractor={item => item.id.toString()}
                 />
             </View>

@@ -14,8 +14,10 @@ function CartScreen (){
 
 
     const handlerConfirmCart = () => {
-        if (items.lenght > 0)
-        dispatch (confirmCart (items,total));
+        if (items)
+      
+        dispatch (confirmCart (items,total)) ;
+        
         else 
         console.log ("no hay productos en la lista");
     }
@@ -25,6 +27,7 @@ function CartScreen (){
     const renderItem = ({item}) => (
         <CartItem item={item} onDelete={handlerDeleteItem.bind(this, item.id)}/>
     )
+    console.log(items)
  
     return (
     
