@@ -7,7 +7,9 @@ import AlimentoDetail from "../../screens/Detalle";
 import FormScreen from "../../screens/FormScreen";
 import Alimentos from "../../screens/Alimentos";
 import Productos from "../../screens/Productos";
+import NewPetScreen from "../../screens/NewPetScreen";
 import { COLORS } from "../../constants/colors";
+
 
 
 const Stack = createNativeStackNavigator ();
@@ -28,6 +30,7 @@ const ShopNavigator = () => {
             }} >
 
                 <Stack.Screen name="Home" component={FormScreen} options= {{title:"MY PET"}} />
+                <Stack.Screen name="Nuevo" component={NewPetScreen} options={{title:"Nueva Mascota"}}/>
                 <Stack.Screen name="Alimentos" component={Alimentos}/>
                 <Stack.Screen name="Productos"  component={Productos} 
                 options={({route}) =>({title: route.params.name})}/>

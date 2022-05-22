@@ -3,7 +3,7 @@ import { StyleSheet,View,Text,FlatList,TouchableOpacity}  from "react-native";
 import CartItem from "../../components/CartItem";
 import {useSelector,useDispatch} from 'react-redux';
 import { confirmCart, removeItem } from "../../store/action/cart.action";
-
+import {COLORS} from "../../constants/colors"
 
 
 function CartScreen (){
@@ -45,8 +45,8 @@ function CartScreen (){
            <TouchableOpacity style = {styles.confirm} onPress={handlerConfirmCart}>
              <Text>Confirmar Compra</Text>  
              <View>
-                 <Text>total</Text>
-                 <Text>{total}</Text>
+                 <Text>TOTAL:</Text>
+                 <Text>${total}</Text>
              </View>
            </TouchableOpacity>
            
@@ -62,12 +62,29 @@ const styles = StyleSheet.create({
     container:{
         flex:1,
         padding: 12,
-        backgroundColor: '#fff',
+        backgroundColor: '#F38B06',
       
     },
     confirm:{
+         
+        
+        borderRadius: 6,
+        shadowOpacity: 'black',
+        shadowOpacity: 0.26,
+        shadowOffset:{width:0 , height: 5},
+        shadowRadius: 6,
+        backgroundColor: COLORS.accent,
+        justifyContent:'center',
+        alignItems:'center',
+        padding:5,
+       
+        
+        alignContent:'center',
+       
+        
+    },
 
-    }
+   
 
  
   

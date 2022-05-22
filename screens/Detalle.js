@@ -2,7 +2,7 @@ import React from "react";
 import {Text,StyleSheet,View,Button,TouchableOpacity} from 'react-native';
 import {useSelector, useDispatch} from 'react-redux'
 import { addItem } from "../store/action/cart.action";
-
+import { COLORS } from "../constants/colors";
 
 function AlimentoDetail () {
 
@@ -42,7 +42,25 @@ const styles = StyleSheet.create({
         fontSize:20,
         fontFamily: 'Courgette',
         marginBottom:10,
+    },
+    textButton:{
+        
+        borderRadius: 6,
+        shadowOpacity: 'black',
+        shadowOpacity: 0.26,
+        shadowOffset:{width:0 , height: 5},
+        shadowRadius: 6,
+        backgroundColor: COLORS.accent,
+        justifyContent:'center',
+        alignItems:'center',
+        padding:5,
+       
+        
+        alignContent:'center',
+       
+        
     }
+
 
 
 
