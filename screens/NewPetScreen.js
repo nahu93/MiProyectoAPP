@@ -18,14 +18,10 @@ const NewPetScreen = ({navigation}) => {
     const handlerSave = () => {
         dispatch (addPet(title,image));
         navigation.navigate('Lista')
+        
     }
 
  
-
-
-
-
-
     return (
        <ScrollView>
            <View style={styles.container}>
@@ -36,15 +32,9 @@ const NewPetScreen = ({navigation}) => {
                
            </View>
 
-            
-        
-             
 
        </ScrollView>
 
-      
-
-       
 
     )
 

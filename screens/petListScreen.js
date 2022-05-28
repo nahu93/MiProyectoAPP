@@ -10,6 +10,7 @@ const PetListScreen= ({navigation}) =>{
 
    let pets = useSelector (state => state.pets);
 
+
    console.log (pets)
 
   const renderItem = (item) =>{
@@ -17,8 +18,11 @@ const PetListScreen= ({navigation}) =>{
       title={item.title}
       image={item.image}
       />
+
+       
        }
 
+      
  
       return (
 

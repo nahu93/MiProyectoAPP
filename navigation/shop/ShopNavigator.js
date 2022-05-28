@@ -9,7 +9,7 @@ import Alimentos from "../../screens/Alimentos";
 import Productos from "../../screens/Productos";
 import NewPetScreen from "../../screens/NewPetScreen";
 import { COLORS } from "../../constants/colors";
-import PetListScreen from "../../screens/petListScreen";
+import PetListScreen from "../../screens/PetListScreen";
 
 
 

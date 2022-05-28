@@ -3,6 +3,8 @@ class Pet {
         this.id = id.toString();
         this.title= title
     }
+    
 }
+console.log(Pet)
 
 export default Pet

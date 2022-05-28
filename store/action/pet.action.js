@@ -12,7 +12,9 @@ export const addPet = (title,image) => {
         console.log(image)
         console.log(fileName)
         console.log(Path)
+        console.log (title)
         console.log('-----------------------')
+        
 
         try{
             await FileSystem.moveAsync ({
