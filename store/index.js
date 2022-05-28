@@ -7,6 +7,7 @@ import AlimentoReducer from './reducers/alimentos.reducer';
 import CartReducer from './reducers/cart.reducer';
 import OrderReducer from './reducers/order.reducer';
 import AuthReducer from './reducers/auth.reducer';
+import PetReducer from './reducers/pet.reducer';
 
 
 const RootReducer = combineReducers ({
@@ -15,6 +16,7 @@ const RootReducer = combineReducers ({
     cart: CartReducer,
     order: OrderReducer,
     //auth: AuthReducer,
+    lista: PetReducer,
 
 })
 

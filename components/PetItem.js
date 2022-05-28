@@ -4,7 +4,8 @@ import { COLORS } from "../constants/colors";
 
 
 const PetItem = ({title, image, onSelect}) => {
-
+console.log(title);
+console.log(image);
 return (
     <TouchableOpacity onPress={onSelect}
     style={styles.petItem}
