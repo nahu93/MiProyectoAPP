@@ -5,6 +5,7 @@ export const ADD_PET = 'ADD_PET'
 export const addPet = (title,image) => {
 
     return async dispatch => {
+        console.log ("dispatching ...")
         const fileName = image.split('/').pop();
         const path= FileSystem.documentDirectory + fileName;
 

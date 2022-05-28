@@ -1,5 +1,5 @@
 import React, {useState}from "react";
-import {View,Text,Button,TextInput,ScrollView,StyleSheet} from "react-native"
+import {View,Text,Button,TextInput,ScrollView,StyleSheet,FlatList} from "react-native"
 import { useDispatch } from "react-redux";
 import { COLORS } from "../constants/colors";
 import ImageSelector from "../components/ImageSelector";
@@ -17,8 +17,15 @@ const NewPetScreen = ({navigation}) => {
     const handlerImageChange = img => setImage (img)
     const handlerSave = () => {
         dispatch (addPet(title,image));
-        navigation.navigate('Home')
+        navigation.navigate('Lista')
     }
+
+ 
+
+
+
+
+
     return (
        <ScrollView>
            <View style={styles.container}>
@@ -28,7 +35,17 @@ const NewPetScreen = ({navigation}) => {
                <Button title="Guardar mascota" color={COLORS.accent} onPress={handlerSave}/>
                
            </View>
+
+            
+        
+             
+
        </ScrollView>
+
+      
+
+       
+
     )
 
 
@@ -50,8 +67,8 @@ const styles = StyleSheet.create ({
         marginBottom:16,
         paddingHorizontal:2,
         paddingVertical:4
-    }
-    
+    },
+   
 })
 
 

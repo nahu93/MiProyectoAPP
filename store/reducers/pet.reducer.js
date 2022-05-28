@@ -7,6 +7,7 @@ const initialState = {
 }
 
 export default (state= initialState,action) =>{
+    console.log ("Reducer...");
     switch (action.type) {
         case ADD_PET: 
         console.log ("ADD_PET");
@@ -16,6 +17,7 @@ export default (state= initialState,action) =>{
             ...state,
             pets: state.pets.concat (newPet),
         }
+        
         default :
         return state
     }
