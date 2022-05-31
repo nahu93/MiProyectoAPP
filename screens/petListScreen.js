@@ -1,12 +1,12 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {useSelector} from "react-redux"
 import PetItem from '../components/PetItem';
 import { FlatList,View,StyleSheet } from "react-native";
 
 
+console.log ("lista +")
 
-
-const PetListScreen= ({navigation}) =>{
+const PetListScreen= () =>{
 
    let pets = useSelector (state => state.pets);
 
@@ -43,10 +43,7 @@ const PetListScreen= ({navigation}) =>{
 
 
     const styles = StyleSheet.create ({
-        lista:{
-            height:200,
-            
-          },
+      
     })
 
     export default  PetListScreen
